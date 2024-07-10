@@ -1,0 +1,18 @@
+package packageCuz;
+
+public class ProgramMain {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello, this is my program to represent my abilities and understanding\n"
+				+ " thus far in my programming journey. I will give options to chose and show different\n"
+				+ " programs within this man program to do different parts of programing. They will include\n"
+				+ " everything from simple requests from the user and printing it out, to sorting algorithms and\n"
+				+ " searching abilities.");
+		
+		
+		
+
+	}
+
+}
