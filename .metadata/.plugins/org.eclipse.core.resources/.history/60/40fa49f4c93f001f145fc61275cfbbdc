@@ -13,8 +13,7 @@ public class BagMain {
 		Scanner scnr = new Scanner(System.in); 
 			Bag<Object> stuff = new Bag<>();
 			
-			System.out.println("This program is Bag Manipulation. We have 2 bags that you can"
-					+ " work with. We are going to request 10 values. Integer, Float, Double, Char or String."
+			System.out.println("We are going to request 10 values. Integer, Float, Double, Char or String."
 					+ " Afterwards, we will modify that Bag with requests for the user to do different functions.");
 			int i = 0;
 			while(i < 10) {
@@ -42,8 +41,7 @@ public class BagMain {
 				else if(ch == 'y' || ch == 'Y') {
 					
 					System.out.println("Choose 1. Add, 2. Remove, 3. Query value if value is in the bag.");
-					Bag<Object> bag1 = new Bag<>();
-					Bag<Object> bag2 = new Bag<>();
+					BagMethod BMethod = new BagMethod();
 					
 					int selection = 0;
 					while(selection == 0) 
@@ -56,16 +54,16 @@ public class BagMain {
 						switch(selection) {
 							case 1:
 								System.out.println("Add value. Enter value: ");
-								String inputValue = scnr.next();
-								bag1.add(inputValue);
+								String value = scnr.next();
+								
 								continue;
 							case 2:
 								System.out.println("Removing value.");
-								
+								Dealership.dealership();
 								continue;
 							case 3:
 								System.out.println("Query for value.");
-								
+								GPASorter.GPA();
 								continue;
 							default:
 								return;
