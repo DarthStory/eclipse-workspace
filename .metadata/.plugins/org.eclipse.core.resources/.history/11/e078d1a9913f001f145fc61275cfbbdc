@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-class Bag<T> implements Iterable<T> {
+class BagOne<T> implements Iterable<T> {
 	
 	/*
 	 * Bag class that implements the Iterable method to get through the array. 

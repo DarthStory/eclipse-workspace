@@ -1,8 +1,7 @@
 package packageCuz;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
+import java.util.List;
 
 class Bag<T> implements Iterable<T> {
 	
@@ -51,49 +50,18 @@ class Bag<T> implements Iterable<T> {
     	}
     	return count;
     }
-    
-    /*
-     * Added Size, merge and distinct methods
-     * 
-     * Also added toString to be able to print out the contents of the bags
-     * 
-     * Iteration is "simple" yet suddenly complex. I have found now 3 ways to iterate
-     * through an array. 2 of them are here: "distinct" and the ones above. There is
-     * another way where you use a loop (i = 0; i < array.lenght; i++) or something along
-     * these lines. For consistency, I tried to keep them as much similar as possible. 
-     * 
-     * I also seem to understand that a "Set" as it states in our course work, cannot
-     * take duplicates. This seems to actually be "forces". Below when I created a "Set"
-     * it only allowed unique items, so when I transfered them to the "distinctBag" 
-     * there were not duplicates. This seems a way to eliminate duplicates if wanted. 
-     */
-    
-    public void merge(Bag<T> otherItems) {
-    	for(T item : otherItems.items) {
-    		this.items.add(item);
-    	}
-    }
-    
-    public int size() {
-    	return items.size();
-    }
-    
-    public Bag<T> distinct() {
-    	Bag<T> distinctBag = new Bag<>();
-    	Set<T> uniqueItems = new HashSet<>(items);
-    	for(T item : uniqueItems) {
-    		distinctBag.add(item);
-    	}
-    	return distinctBag;
-    }
 
     @Override
     public Iterator<T> iterator() {
         return items.iterator();
     }
     
-    @Override
-    public String toString() {
-    	return items.toString();
+    //Getters and setters for the items array. 
+    public List<T> getItems() {
+    	return new ArrayList<>(items);
+    }
+    
+    public void setItems(List<T> items) {
+    	this.items = new ArrayList<>(items);
     }
 }

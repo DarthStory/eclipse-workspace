@@ -21,25 +21,18 @@ public class BagMain {
 			stuff.add(value);
 		}
 		
-		
+		List<Object> currentItems = stuff.getItems();
+		System.out.println("\nCurrent items in the bag: " + currentItems);
 		
 		
 		int choice = -1;
 		while (choice < 0) {
 			System.out.println("Would you like to Add, Remove or see if a value is in the bag?");
-			String answer = scnr.next();
-			char ch = answer.charAt(0);
-			if( ch == 'n' || ch == 'N') {
-			return;	
-			}else if (ch == 'y' || ch == 'Y') {
-				BagMethod BMethod = new BagMethod();
-				System.out.println("");
-			}else {
-				System.out.println("");
-			}			
+			String yesNo = scnr.nextLine();
+			
 		}
 		
-		
+		return;
 	}
 	public static void addBag() {
 		Scanner scnr = new Scanner(System.in);

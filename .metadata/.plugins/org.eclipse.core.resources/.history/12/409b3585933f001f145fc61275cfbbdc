@@ -21,7 +21,8 @@ public class BagMain {
 			stuff.add(value);
 		}
 		
-		
+		List<Object> currentItems = stuff.getItems();
+		System.out.println("\nCurrent items in the bag: " + currentItems);
 		
 		
 		int choice = -1;

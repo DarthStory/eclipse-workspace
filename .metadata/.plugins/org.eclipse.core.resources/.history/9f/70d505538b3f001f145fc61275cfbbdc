@@ -21,7 +21,8 @@ public class BagMain {
 			stuff.add(value);
 		}
 		
-		
+		List<Object> currentItems = stuff.getItems();
+		System.out.println("\nCurrent items in the bag: " + currentItems);
 		
 		
 		int choice = -1;
@@ -31,8 +32,7 @@ public class BagMain {
 			char ch = answer.charAt(0);
 			if( ch == 'n' || ch == 'N') {
 			return;	
-			}else if (ch == 'y' || ch == 'Y') {
-				BagMethod BMethod = new BagMethod();
+			}else if {
 				System.out.println("");
 			}else {
 				System.out.println("");
