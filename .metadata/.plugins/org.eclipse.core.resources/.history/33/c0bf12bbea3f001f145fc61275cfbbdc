@@ -38,7 +38,8 @@ public class BagMain {
 				char ch = answer.charAt(0);
 				if(ch == 'n' || ch == 'N') {
 				return;	
-				}else if(ch == 'y' || ch == 'Y') {
+				}
+				else if(ch == 'y' || ch == 'Y') {
 					
 					System.out.println("Choose 1. Add, 2. Remove, 3. Query value if value is in the bag.");
 					Bag<Object> bag1 = new Bag<>();
@@ -73,30 +74,34 @@ public class BagMain {
 								String inputValueRemove = scnr.next();
 								System.out.println("Removing value.");
 								if(chosenRemove == 1) {
-									System.out.println("Removing from bag 1: " + inputValueRemove);
+									System.out.println("Adding to bag 1: " + inputValueRemove);
 									bag1.remove(inputValueRemove);
 								}else {
-									System.out.println("Removing from bag 2: " + inputValueRemove);
+									System.out.println("Adding to bag 2: " + inputValueRemove);
 									bag2.remove(inputValueRemove);
 								}
 								continue;
 							case 3:
 								System.out.println("Enter Bag number to query, 1 or 2?");
 								int chosenQuery = scnr.nextInt();
-								System.out.println("Query value. Enter value: ");
+								System.out.println("Add value. Enter value: ");
 								String inputValueQuery = scnr.next();
 								if(chosenQuery == 1) {
-									
+									System.out.println("Adding to bag 1: " + inputValueQuery);
+									bag1.contains(inputValueQuery);
 								}else {
-									System.out.println("Does Bag 2 contain: " + inputValueQuery + "?: " + bag2.contains(inputValueQuery));
-								}								
+									System.out.println("Adding to bag 2: " + inputValueQuery);
+									bag2.contains(inputValueQuery);
+								
+								System.out.println("Query for value.");
+								
 								continue;
 							default:
 								return;
 					}
 				}
 				else {
-					System.out.println("Invalid Entry. Enter in Y(Yes) or N(No).");
+					System.out.println("");
 				}
 			}
 		}

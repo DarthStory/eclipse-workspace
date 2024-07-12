@@ -76,7 +76,7 @@ public class BagMain {
 									System.out.println("Removing from bag 1: " + inputValueRemove);
 									bag1.remove(inputValueRemove);
 								}else {
-									System.out.println("Removing from bag 2: " + inputValueRemove);
+									System.out.println("Removing froms bag 2: " + inputValueRemove);
 									bag2.remove(inputValueRemove);
 								}
 								continue;

@@ -41,11 +41,6 @@ class Bag<T> implements Iterable<T> {
     	return false;
     }
     
-    public void clear() {
-    	items.clear();
-    }
-    
-    
     public int count(T item) {
     	int count = 0;
     	Iterator<T> counter = items.iterator();

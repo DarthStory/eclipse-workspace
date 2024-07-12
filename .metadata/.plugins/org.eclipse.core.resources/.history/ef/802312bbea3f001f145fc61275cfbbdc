@@ -41,8 +41,11 @@ class Bag<T> implements Iterable<T> {
     	return false;
     }
     
-    public void clear() {
-    	items.clear();
+    public void clear(T item) {
+    	Iterator<T> clear = items.iterator();
+    	while(clear.hasNext()) {
+    		clear.remove();
+    	}
     }
     
     
