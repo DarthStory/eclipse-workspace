@@ -90,24 +90,12 @@ public class BagMain {
 								System.out.println("Query value. Enter value: ");
 								String inputValueQuery = scnr.next();
 								if(chosenQuery == 1) {
-									System.out.println("Does Bag 1 contain: " + inputValueQuery + "?: " + bag1.contains(inputValueQuery));
+									System.out.println("Does Bag 1 contain: " + inputValueQuery + "?: " + bag2.contains(inputValueQuery));
 								}else {
 									System.out.println("Does Bag 2 contain: " + inputValueQuery + "?: " + bag2.contains(inputValueQuery));
 								}
 								System.out.println(bag1);
 								System.out.println(bag2);
-								continue;
-							case 4:
-								System.out.println("Enter Bag number to remove, 1 or 2?");
-								int chosenClear = scnr.nextInt();
-								System.out.println("Removing value.");
-								if(chosenClear == 1) {
-									System.out.println("Clearing bag 1");
-									bag1.clear();
-								}else {
-									System.out.println("Clearing bag 2");
-									bag2.clear();
-								}
 								continue;
 							default:
 								return;

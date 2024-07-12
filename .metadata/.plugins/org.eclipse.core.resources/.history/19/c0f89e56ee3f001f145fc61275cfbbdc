@@ -97,18 +97,6 @@ public class BagMain {
 								System.out.println(bag1);
 								System.out.println(bag2);
 								continue;
-							case 4:
-								System.out.println("Enter Bag number to remove, 1 or 2?");
-								int chosenClear = scnr.nextInt();
-								System.out.println("Removing value.");
-								if(chosenClear == 1) {
-									System.out.println("Clearing bag 1");
-									bag1.clear();
-								}else {
-									System.out.println("Clearing bag 2");
-									bag2.clear();
-								}
-								continue;
 							default:
 								return;
 					}

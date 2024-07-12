@@ -11,9 +11,8 @@ public class BagMain {
 	public static void Bags() {
 
 		Scanner scnr = new Scanner(System.in); 
-		Bag<Object> bag1 = new Bag<>();
-		Bag<Object> bag2 = new Bag<>();	
-		
+			Bag<Object> stuff = new Bag<>();
+			
 			System.out.println("This program is Bag Manipulation. We have 2 bags that you can"
 					+ " work with. We are going to request 10 values. Integer, Float, Double, Char or String."
 					+ " Afterwards, we will modify that Bag with requests for the user to do different functions.");
@@ -22,12 +21,12 @@ public class BagMain {
 				for(i = 0; i < 9; i++) {
 				System.out.println("Enter in a value: ");
 				String value = scnr.nextLine();
-				bag1.add(value);
+				stuff.add(value);
 			}
 			
 				
 				
-			for(Object list : bag1) {
+			for(Object list : stuff) {
 				System.out.print(list + " ");
 				
 			}
@@ -42,7 +41,8 @@ public class BagMain {
 				}else if(ch == 'y' || ch == 'Y') {
 					
 					System.out.println("Choose 1. Add, 2. Remove, 3. Query value if value is in the bag.");
-					
+					Bag<Object> bag1 = new Bag<>();
+					Bag<Object> bag2 = new Bag<>();
 					
 					int selection = 0;
 					while(selection == 0) 
@@ -90,24 +90,12 @@ public class BagMain {
 								System.out.println("Query value. Enter value: ");
 								String inputValueQuery = scnr.next();
 								if(chosenQuery == 1) {
-									System.out.println("Does Bag 1 contain: " + inputValueQuery + "?: " + bag1.contains(inputValueQuery));
+									System.out.println("Does Bag 1 contain: " + inputValueQuery + "?: " + bag2.contains(inputValueQuery));
 								}else {
 									System.out.println("Does Bag 2 contain: " + inputValueQuery + "?: " + bag2.contains(inputValueQuery));
 								}
 								System.out.println(bag1);
 								System.out.println(bag2);
-								continue;
-							case 4:
-								System.out.println("Enter Bag number to remove, 1 or 2?");
-								int chosenClear = scnr.nextInt();
-								System.out.println("Removing value.");
-								if(chosenClear == 1) {
-									System.out.println("Clearing bag 1");
-									bag1.clear();
-								}else {
-									System.out.println("Clearing bag 2");
-									bag2.clear();
-								}
 								continue;
 							default:
 								return;
