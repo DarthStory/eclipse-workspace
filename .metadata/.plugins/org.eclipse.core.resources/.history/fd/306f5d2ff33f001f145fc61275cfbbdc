@@ -3,10 +3,6 @@ package packageCuz;
 import java.util.InputMismatchException;
 /*
  *  Working on requesting info for the input to the bag. 
- *  
- *  Ability to create a whole new bag
- *  
- *  
  */
 import java.util.Scanner;
 
@@ -45,7 +41,7 @@ public class BagMain {
 				return;	
 				}else if(ch == 'y' || ch == 'Y') {
 					
-					System.out.println("Choose 1. Add, 2. Remove, 3. Query, 4. Clear, 5. Count, 6. Merge, 7. Size.");
+					System.out.println("Choose 1. Add, 2. Remove, 3. Query value if value is in the bag.");
 					
 					
 					int selection = 0;
