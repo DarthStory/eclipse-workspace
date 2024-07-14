@@ -32,8 +32,7 @@ public class BagMain {
 				
 			
 			while(true) {
-				System.out.println("\nWould you like to Add, Remove, Query a value, Clear a bag, Find Size, Count a value "
-						+ "or Merga all bags?");
+				System.out.println("\nWould you like to Add, Remove, Query, Clear or Print out a Bag?");
 				String answer = scnr.next();
 				char ch = answer.charAt(0);
 				if(ch == 'n' || ch == 'N') {
@@ -90,7 +89,7 @@ public class BagMain {
 								System.out.println("Enter Bag number to query, 1 or 2?");
 								int chosenQuery = scnr.nextInt();
 								System.out.println("Query value. Enter value: ");
-								String inputValueQuery = scnr.next();
+								String inputValueQuery = scnr.nextLine();
 								if(chosenQuery == 1) {
 									System.out.println("Does Bag 1 contain: " + inputValueQuery + "?: " + bag1.contains(inputValueQuery));
 								}else {
@@ -131,24 +130,15 @@ public class BagMain {
 								System.out.println("");
 								System.out.print("Bag 2: ");
 								bag2.print();
-								System.out.println("");
 								System.out.println("Which bag do you need to count from? ");
 								int chosenCount = scnr.nextInt();
 								System.out.println("What value do you want to count? ");
-								String inputValueCount = scnr.next();
+								String inputValueCount = scnr.nextLine();
 								if(chosenCount == 1) {
 									System.out.println("Bag 1 has " + bag1.count(inputValueCount));
 								}else {
 									System.out.println("Bag 2 has " + bag2.count(inputValueCount));
 								}
-								continue;
-							case 7: // Merge
-								
-								System.out.println("Merging Bags.\n");
-								bag1.merge(bag2);
-								bag1.print();
-								System.out.println("");
-								bag2.print();
 								continue;
 							default:
 								return;

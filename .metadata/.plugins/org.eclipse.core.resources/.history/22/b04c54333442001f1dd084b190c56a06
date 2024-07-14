@@ -32,8 +32,7 @@ public class BagMain {
 				
 			
 			while(true) {
-				System.out.println("\nWould you like to Add, Remove, Query a value, Clear a bag, Find Size, Count a value "
-						+ "or Merga all bags?");
+				System.out.println("\nWould you like to Add, Remove, Query, Clear or Print out a Bag?");
 				String answer = scnr.next();
 				char ch = answer.charAt(0);
 				if(ch == 'n' || ch == 'N') {
@@ -141,14 +140,6 @@ public class BagMain {
 								}else {
 									System.out.println("Bag 2 has " + bag2.count(inputValueCount));
 								}
-								continue;
-							case 7: // Merge
-								
-								System.out.println("Merging Bags.\n");
-								bag1.merge(bag2);
-								bag1.print();
-								System.out.println("");
-								bag2.print();
 								continue;
 							default:
 								return;

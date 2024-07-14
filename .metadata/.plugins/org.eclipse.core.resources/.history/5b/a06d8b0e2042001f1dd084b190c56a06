@@ -91,12 +91,7 @@ class Bag<T> implements Iterable<T> {
     	}
     	return distinctBag;
     }
-    public void print() {	
-		for(Object item : items) {
-			System.out.print(item + " ");	
-		}
-    }
-	
+
     @Override
     public Iterator<T> iterator() {
         return items.iterator();

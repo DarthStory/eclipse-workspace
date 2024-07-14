@@ -91,7 +91,8 @@ class Bag<T> implements Iterable<T> {
     	}
     	return distinctBag;
     }
-    public void print() {	
+    public void print() {
+    System.out.println("Bag 1: ");	
 		for(Object item : items) {
 			System.out.print(item + " ");	
 		}

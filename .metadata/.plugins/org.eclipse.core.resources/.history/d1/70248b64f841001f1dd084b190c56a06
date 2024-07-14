@@ -28,19 +28,24 @@ public class BagMain {
 				String value = scnr.nextLine();
 				bag1.add(value);
 			}
+			
 				
+				
+			for(Object list : bag1) {
+				System.out.print(list + " ");
+				
+			}
 				
 			
 			while(true) {
-				System.out.println("\nWould you like to Add, Remove, Query a value, Clear a bag, Find Size, Count a value "
-						+ "or Merga all bags?");
+				System.out.println("\nWould you like to Add, Remove, Query, Clear or Print out a Bag?");
 				String answer = scnr.next();
 				char ch = answer.charAt(0);
 				if(ch == 'n' || ch == 'N') {
 				return;	
 				}else if(ch == 'y' || ch == 'Y') {
 					
-					System.out.println("Choose 1. Add, 2. Remove, 3. Query, 4. Clear, 5. Size, 6. Count, 7. Merge.");
+					System.out.println("Choose 1. Add, 2. Remove, 3. Query, 4. Clear, 5. Count, 6. Merge, 7. Size.");
 					
 					
 					int selection = 0;
@@ -48,7 +53,7 @@ public class BagMain {
 						try {
 							selection = scnr.nextInt();
 						}catch (InputMismatchException e) {
-							System.out.println("Invalid entry. Please try again. 1-7: ");
+							System.out.println("Invalid entry. Please try again. 1-5: ");
 							scnr.next();
 						}
 						switch(selection) {
@@ -103,6 +108,7 @@ public class BagMain {
 								
 								System.out.println("Enter Bag number to remove, 1 or 2?");
 								int chosenClear = scnr.nextInt();
+								System.out.println("Removing value.");
 								if(chosenClear == 1) {
 									System.out.println("Clearing bag 1.");
 									bag1.clear();
@@ -111,7 +117,7 @@ public class BagMain {
 									bag2.clear();
 								}
 								continue;
-							case 5: // Size
+							case 5: // Count
 								
 								System.out.println("Enter a bag to find the size, 1, 2 or 3(Both): ");
 								int chosenSize = scnr.nextInt();
@@ -121,34 +127,8 @@ public class BagMain {
 								}else if(chosenSize == 2) {
 									System.out.println("Bag 2 Quantity: " + bag2.size());
 								}else {
-									System.out.println("Bag Quantities:\n" + "Bag 1: " + bag1.size() + "\n" +"Bag 2: " + bag2.size());
+									System.out.println("Bag 1 and Bag 2 quanitity: " + "Bag 1: " + sbag1.size() + "\n" +"Bag 2: " + bag2.size());
 								}
-								continue;
-							case 6: // Count
-								
-								System.out.print("Bag 1: ");
-								bag1.print();
-								System.out.println("");
-								System.out.print("Bag 2: ");
-								bag2.print();
-								System.out.println("");
-								System.out.println("Which bag do you need to count from? ");
-								int chosenCount = scnr.nextInt();
-								System.out.println("What value do you want to count? ");
-								String inputValueCount = scnr.next();
-								if(chosenCount == 1) {
-									System.out.println("Bag 1 has " + bag1.count(inputValueCount));
-								}else {
-									System.out.println("Bag 2 has " + bag2.count(inputValueCount));
-								}
-								continue;
-							case 7: // Merge
-								
-								System.out.println("Merging Bags.\n");
-								bag1.merge(bag2);
-								bag1.print();
-								System.out.println("");
-								bag2.print();
 								continue;
 							default:
 								return;
@@ -159,5 +139,9 @@ public class BagMain {
 				}
 			}
 		}
+	}
+	public static void addBag() {
+		Scanner scnr = new Scanner(System.in);
+		
 	}
 }
