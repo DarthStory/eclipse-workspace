@@ -56,7 +56,7 @@ public class Dealership {
 						continue;
 					}
 				}
-				System.out.println("Exiting application.");
+				System.out.println("\n\t\t---> Exiting application. <---");
 				
 				// specifically exits the while loop to exit the program
 				return;

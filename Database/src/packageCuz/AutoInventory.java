@@ -65,7 +65,7 @@ public class AutoInventory {
 		// setups loop to progress through the list
 		for(int i = 0; i < automobiles.size(); i++) {
 			// prints out the index of the object, and the variables of that object (automobile)
-			System.out.print("Automobile #" + (i + 1) + " ");
+			System.out.print("\nAutomobile #" + (i + 1) + " ");
 			//prints out the whole list (automobiles)
 			System.out.println(automobiles.get(i));
 		}

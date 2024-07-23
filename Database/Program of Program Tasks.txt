@@ -1,0 +1,54 @@
+Projects Overview/Pseudocode
+Automobile Inventory
+// get a working database in a .txt file
+
+GPA Sorter
+// get a working database in a .txt file
+
+Bag Manipulation
+
+1. Tell the user they have 2 bags that they can add, remove or query for values in them. 
+2. Ask which they want to do
+3.
+	if add:		1
+		ask which bag
+		ask what value to add
+		add value
+		return to 2
+
+	if remove 	2
+		ask which bag
+		ask what value to remove
+		remove value
+		return to 2
+
+	if query 	3
+		ask which bag
+		ask what value to query
+		return true/false
+		return to 2
+
+	if clear 	4
+		ask which bag
+		clear bag
+		return to 2
+
+	if size 	5
+		ask which bag
+		give size of bag
+		return to 2
+
+	if count 	6
+		ask which bag
+		ask what value to count
+		return count
+		return to 2
+
+	if merge 	7
+		return merged bags
+
+	if exit 	0
+		print out bag 1 and bag 2
+		exit program
+		
+after each one, repeat: 2. 

@@ -1,5 +1,6 @@
 package packageCuz;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class GPASorter {
 			char ch = answer.charAt(0);
 				if( ch == 'n' || ch == 'N') {
 					
-					System.out.println("Sorting by Name. Saving to: C:\\Temp\\GPA.txt \nExiting program.\n");
+					System.out.println("Sorting by Name. Saving: StudentGPA.txt \n\t\t---> Exiting application. <---");
 					StudentSorter.selectionSort(students, new StringComparator());
 					for(Student student : students) {
 						System.out.println(student);
@@ -80,15 +81,32 @@ public class GPASorter {
 				System.out.println();
 		}
 	}
-	public static void saveToFile(LinkedList<Student> students) {		
-		File file = new File("C:\\Temp\\GPA.txt");		
-	       try (FileWriter writer = new FileWriter(file)) {        	
-	           for(Student student : students) {
-	        	   writer.write(student.toString() + "\n");
-	           }
-	       } catch (IOException e) {
-	           e.printStackTrace();
+	public static void saveToFile(LinkedList<Student> students) {
+		String fileName = "StudentGPA.txt";
+		String filePath = System.getProperty("user.dir") + File.separator + fileName;
+		
+		System.out.println("File path: " + filePath);
+		
+		File file = new File(filePath);	
+		try {
+            // Check if the file already exists
+            if (file.exists()) {
+                System.out.println("File already exists.");
+            }else{
+                // Create a new file
+                file.createNewFile();
+                System.out.println("File created: " + file.getName());
+            }
+            FileWriter writer = new FileWriter(file);
+            BufferedWriter bufferWriter = new BufferedWriter(writer);
+	        for(Student student : students) {
+	        	writer.write(student.toString() + "\n");
+	        }
+	        bufferWriter.close();
+		}catch (IOException e) {
+	    	e.printStackTrace();
 	       }
 	}
-
 }
+
+

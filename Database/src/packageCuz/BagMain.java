@@ -19,8 +19,8 @@ public class BagMain {
 		Bag<Object> bag2 = new Bag<>();	
 		
 			System.out.println("This program is Bag Manipulation. We have 2 bags that you can"
-					+ " work with. We are going to request 10 values. Integer, Float, Double, Char or String."
-					+ " Afterwards, we will modify that Bag with requests for the user to do different functions.");
+					+ " work with. \nWe are going to request 10 values. Integer, Float, Double, Char or String."
+					+ " \nAfterwards, we will modify that Bag with requests for the user to do different functions.");
 			int i = 0;
 			while(i < 10) {
 				for(i = 0; i < 10; i++) {
@@ -32,23 +32,22 @@ public class BagMain {
 				
 			
 			while(true) {
-				System.out.println("\nWould you like to Add, Remove, Query a value, Clear a bag, Find Size, Count a value "
-						+ "or Merga all bags?");
+				System.out.println("\nModify the bags? Y(Yes), or Exit, N(No).");
 				String answer = scnr.next();
 				char ch = answer.charAt(0);
 				if(ch == 'n' || ch == 'N') {
 				return;	
 				}else if(ch == 'y' || ch == 'Y') {
 					
-					System.out.println("Choose 1. Add, 2. Remove, 3. Query, 4. Clear, 5. Size, 6. Count, 7. Merge.");
+					System.out.println("Choose 1. Add, 2. Remove, 3. Query, 4. Clear, 5. Size, 6. Count, 7. Merge, 8. View Bags.");
 					
 					
-					int selection = 0;
-					while(selection == 0) 
+					int selection = -1;
+					while(selection < 0) 
 						try {
 							selection = scnr.nextInt();
 						}catch (InputMismatchException e) {
-							System.out.println("Invalid entry. Please try again. 1-7: ");
+							System.out.println("Invalid entry. Please try again. 1-8: ");
 							scnr.next();
 						}
 						switch(selection) {
@@ -126,11 +125,6 @@ public class BagMain {
 								continue;
 							case 6: // Count
 								
-								System.out.print("Bag 1: ");
-								bag1.print();
-								System.out.println("");
-								System.out.print("Bag 2: ");
-								bag2.print();
 								System.out.println("");
 								System.out.println("Which bag do you need to count from? ");
 								int chosenCount = scnr.nextInt();
@@ -148,6 +142,14 @@ public class BagMain {
 								bag1.merge(bag2);
 								bag1.print();
 								System.out.println("");
+								bag2.print();
+								continue;
+							case 8: // View Bags
+								
+								System.out.print("Bag 1: ");
+								bag1.print();
+								System.out.println("");
+								System.out.print("Bag 2: ");
 								bag2.print();
 								continue;
 							default:
