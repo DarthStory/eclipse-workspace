@@ -109,6 +109,16 @@ public class AutoInventory {
 	    	e.printStackTrace();
 	    }
 		
-
+//		try {
+//			BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Temp\\AutoInventory.txt"));
+//			for (@SuppressWarnings("unused") Automobile vehicle : automobiles) {
+//				writer.write("\n" + automobiles);
+//				break;
+//			}
+//			System.out.println("List has been saved to: C:\\Temp\\");
+//			writer.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 }
