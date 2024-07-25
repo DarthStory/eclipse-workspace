@@ -55,9 +55,10 @@ public class Dealership {
 						System.out.println("Please enter either \"Y\" or \"N\". Thank you.\n");
 						continue;
 					}
+					
 				}
 				System.out.println("\n\t\t---> Exiting application. <---");
-				
+				scnr.close();
 				// specifically exits the while loop to exit the program
 				return;
 			case 1:

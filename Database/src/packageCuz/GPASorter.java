@@ -43,7 +43,7 @@ public class GPASorter {
 					for(Student student : students) {
 						System.out.println(student);
 						saveToFile(students);
-						
+						scnr.close();
 					}
 					return;
 					//System.exit(0);
