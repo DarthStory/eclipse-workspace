@@ -1,6 +1,12 @@
 Projects Overview/Pseudocode
 Automobile Inventory
 // get a working database in a .txt file
+// used sqlite3 instead
+// will have to be able to 
+	add
+	remove
+	edit
+	merge
 
 GPA Sorter
 // get a working database in a .txt file
